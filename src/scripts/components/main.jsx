@@ -8,13 +8,11 @@ require('../../styles/main.css');
 (window !== window.top ? window.top : window).React = React;
 
 var React = require('react');
-var LoginPage = require('./LoginPage');
-var RoomPage = require('./RoomPage');
+var ChatApp = require('./ChatApp');
 var {DefaultRoute, Route, Routes} = require('react-router');
 
 React.renderComponent((
   <Routes location="history">
-    <Route path="/" handler={LoginPage}></Route>
-    <Route name="room" path="room" handler={RoomPage}></Route>
+    <Route path="/" handler={ChatApp}></Route>
   </Routes>
 ), document.getElementById('content'));
