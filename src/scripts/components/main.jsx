@@ -15,6 +15,6 @@ var {DefaultRoute, Route, Routes} = require('react-router');
 React.renderComponent((
   <Routes location="history">
     <Route path="/" handler={LoginPage}></Route>
-    <Route path="room" handler={RoomPage}></Route>
+    <Route name="room" path="room" handler={RoomPage}></Route>
   </Routes>
 ), document.getElementById('content'));
