@@ -7,12 +7,17 @@
 var React = require('react/addons');
 
 var UsersList = React.createClass({
-  render: function() {
-    return (
-      <div className='main'>
-        UsersList
+  renderItems: function() {
+    return _.map(this.props.users, function(user) {
+      return <div className='main'>
+        {user.name}
       </div>
-    );
+    })
+  },
+  render: function() {
+    return <div>
+      {this.renderItems()}
+    </div>
   }
 });
 
